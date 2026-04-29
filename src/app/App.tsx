@@ -34,15 +34,16 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white" style={{ fontFamily: 'Poppins, sans-serif', scrollBehavior: 'smooth' }}>
       {/* Navigation - Sticky with Logo */}
-      <nav className="bg-[#FF8FA3] text-white py-3 px-6 sticky top-0 z-50 shadow-lg">
+      <nav className="bg-[#C9184A] text-white py-3 px-6 sticky top-0 z-50 shadow-lg">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           {/* Logo di Kiri Atas */}
           <div className="flex items-center gap-3">
-            <div className="bg-white rounded-full w-12 h-12 md:w-14 md:h-14 flex items-center justify-center shadow-md">
-              <div className="text-center">
-                <p className="text-[#FF8FA3] font-bold text-[10px] md:text-xs leading-tight">ROSET</p>
-                <p className="text-[#FF8FA3] font-bold text-[10px] md:text-xs leading-tight">SPARK</p>
-              </div>
+            <div className="bg-white rounded-full w-12 h-12 md:w-16 md:h-16 flex items-center justify-center shadow-md overflow-hidden">
+              <img 
+                src="/images/logo.png" 
+                alt="ROSET SPARK Logo" 
+                className="w-full h-full object-contain p-1"
+              />
             </div>
             <div className="hidden sm:block">
               <p className="font-bold text-base md:text-lg">ROSET SPARK</p>
@@ -72,7 +73,7 @@ export default function App() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-[#FF8FA3] border-t border-white/20 shadow-xl">
+          <div className="md:hidden absolute top-full left-0 right-0 bg-[#C9184A] border-t border-white/20 shadow-xl">
             <div className="flex flex-col py-4">
               <a href="#hero" className="px-6 py-3 hover:bg-white/10 transition">Beranda</a>
               <a href="#tentang" className="px-6 py-3 hover:bg-white/10 transition">Tentang</a>
@@ -86,7 +87,7 @@ export default function App() {
       </nav>
 
       {/* Hero Section - Banner Style */}
-      <section id="hero" className="relative bg-gradient-to-br from-[#FFB3C1] via-[#FF8FA3] to-[#FF8FA3] text-white py-10 md:py-16 px-4 md:px-6">
+      <section id="hero" className="relative bg-gradient-to-br from-[#C9184A] via-[#E0174A] to-[#FF4D6D] text-white py-10 md:py-16 px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
           {/* Banner/Flyer Content */}
           <div className="bg-white/5 backdrop-blur-sm rounded-2xl md:rounded-3xl p-6 md:p-12 border-2 border-white/20 shadow-2xl">
@@ -107,47 +108,47 @@ export default function App() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 py-4 md:py-6">
                   <div className="flex items-center gap-2 md:gap-3">
                     <div className="bg-white rounded-full p-2 shadow-md">
-                      <Zap className="w-4 h-4 md:w-5 md:h-5 text-[#C41E3A]" />
+                      <Zap className="w-4 h-4 md:w-5 md:h-5 text-[#C9184A]" />
                     </div>
                     <p className="font-semibold text-sm md:text-base text-white drop-shadow-lg">Meningkatkan Fokus</p>
                   </div>
                   <div className="flex items-center gap-2 md:gap-3">
                     <div className="bg-white rounded-full p-2 shadow-md">
-                      <Heart className="w-4 h-4 md:w-5 md:h-5 text-[#C41E3A]" />
+                      <Heart className="w-4 h-4 md:w-5 md:h-5 text-[#C9184A]" />
                     </div>
                     <p className="font-semibold text-sm md:text-base text-white drop-shadow-lg">Antioksidan Tinggi</p>
                   </div>
                   <div className="flex items-center gap-2 md:gap-3">
                     <div className="bg-white rounded-full p-2 shadow-md">
-                      <Shield className="w-4 h-4 md:w-5 md:h-5 text-[#C41E3A]" />
+                      <Shield className="w-4 h-4 md:w-5 md:h-5 text-[#C9184A]" />
                     </div>
                     <p className="font-semibold text-sm md:text-base text-white drop-shadow-lg">Tanpa Efek Samping</p>
                   </div>
                   <div className="flex items-center gap-2 md:gap-3">
                     <div className="bg-white rounded-full p-2 shadow-md">
-                      <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-[#C41E3A]" />
+                      <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-[#C9184A]" />
                     </div>
                     <p className="font-semibold text-sm md:text-base text-white drop-shadow-lg">Herbal Sparkling</p>
                   </div>
                 </div>
 
                 {/* Komposisi */}
-                <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 md:p-4 border-2 border-[#C41E3A]/50 shadow-lg">
-                  <p className="text-xs md:text-sm uppercase tracking-wider text-[#C41E3A] font-bold mb-2">Komposisi</p>
+                <div className="bg-white/95 backdrop-blur-sm rounded-xl p-3 md:p-4 border-2 border-[#C9184A]/50 shadow-lg">
+                  <p className="text-xs md:text-sm uppercase tracking-wider text-[#C9184A] font-bold mb-2">Komposisi</p>
                   <p className="text-base md:text-lg font-bold text-gray-900">Rosella • Jahe • Kayu Manis • Pemanis Alami</p>
                 </div>
 
                 {/* Harga & CTA */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-2 md:pt-4">
                   <div className="bg-white/95 px-5 py-3 rounded-xl shadow-xl border-2 border-white">
-                    <p className="text-3xl md:text-4xl font-extrabold text-[#C41E3A]">Rp10.000</p>
+                    <p className="text-3xl md:text-4xl font-extrabold text-[#C9184A]">Rp10.000</p>
                     <p className="text-xs md:text-sm text-gray-700 font-semibold">per botol (250ml)</p>
                   </div>
                   <a
                     href="https://wa.me/6285231264685?text=Halo,%20saya%20ingin%20memesan%20ROSET%20SPARK"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full sm:w-auto bg-white text-[#C41E3A] px-6 md:px-8 py-3 md:py-4 rounded-xl font-extrabold text-base md:text-lg hover:bg-[#C41E3A] hover:text-white transition-all shadow-xl flex items-center justify-center gap-2 border-3 border-white"
+                    className="w-full sm:w-auto bg-white text-[#C9184A] px-6 md:px-8 py-3 md:py-4 rounded-xl font-extrabold text-base md:text-lg hover:bg-[#C9184A] hover:text-white transition-all shadow-xl flex items-center justify-center gap-2 border-3 border-white"
                   >
                     <Phone className="w-4 h-4 md:w-5 md:h-5" />
                     Pesan Sekarang
@@ -155,21 +156,15 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Right Side - Visual */}
+              {/* Right Side - Product Image */}
               <div className="relative">
-                <div className="bg-white rounded-3xl p-8 border-4 border-white shadow-2xl">
-                  <div className="aspect-[3/4] bg-gradient-to-br from-[#FFE5EB] to-[#FFF5F7] rounded-2xl flex flex-col items-center justify-center space-y-6 p-6 border-2 border-[#FFB3C1]">
-                    <Sparkles className="w-32 h-32 text-[#C41E3A]" />
-                    <div className="text-center space-y-3">
-                      <p className="text-3xl font-extrabold text-[#C41E3A]">ROSET SPARK</p>
-                      <div className="bg-[#C41E3A] h-1.5 w-24 mx-auto rounded-full"></div>
-                      <p className="text-sm uppercase tracking-widest text-gray-700 font-bold">Minuman Herbal Sparkling</p>
-                      <div className="flex flex-wrap justify-center gap-2 pt-4">
-                        <span className="bg-[#C41E3A] text-white px-4 py-2 rounded-full text-xs font-bold shadow-md">Rosella</span>
-                        <span className="bg-[#1B5E20] text-white px-4 py-2 rounded-full text-xs font-bold shadow-md">Jahe</span>
-                        <span className="bg-[#B8860B] text-white px-4 py-2 rounded-full text-xs font-bold shadow-md">Kayu Manis</span>
-                      </div>
-                    </div>
+                <div className="bg-white rounded-3xl p-2 border-4 border-white shadow-2xl">
+                  <div className="bg-gradient-to-br from-[#FFE5EB] to-[#FFF5F7] rounded-2xl flex flex-col items-center justify-center overflow-hidden border-2 border-[#C9184A]/30">
+                    <img
+                      src="/images/banner-iklan.png"
+                      alt="ROSET SPARK - Minuman Herbal Sparkling"
+                      className="w-full h-auto max-h-[700px] object-contain rounded-xl drop-shadow-xl"
+                    />
                   </div>
                 </div>
               </div>
@@ -180,7 +175,7 @@ export default function App() {
           <div className="text-center mt-8">
             <a
               href="#video"
-              className="inline-flex items-center gap-2 bg-white text-[#C41E3A] px-8 py-4 rounded-full font-extrabold hover:bg-[#C41E3A] hover:text-white transition-all shadow-2xl border-3 border-white"
+              className="inline-flex items-center gap-2 bg-white text-[#C9184A] px-8 py-4 rounded-full font-extrabold hover:bg-[#C9184A] hover:text-white transition-all shadow-2xl border-3 border-white"
             >
               <Sparkles className="w-5 h-5" />
               Lihat Video Produk
@@ -193,8 +188,8 @@ export default function App() {
       <section className="py-12 md:py-16 px-4 md:px-6 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#C41E3A] mb-3 md:mb-4">Brosur Produk</h2>
-            <div className="w-20 md:w-24 h-1 bg-[#C41E3A] mx-auto mb-4 md:mb-6"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#C9184A] mb-3 md:mb-4">Brosur Produk</h2>
+            <div className="w-20 md:w-24 h-1 bg-[#C9184A] mx-auto mb-4 md:mb-6"></div>
             <p className="text-lg md:text-xl text-gray-600">
               Lihat detail lengkap produk ROSET SPARK
             </p>
@@ -202,25 +197,25 @@ export default function App() {
 
           <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
             {/* Brosur Utama */}
-            <div className="bg-white rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border-2 border-[#FF8FA3]/20 hover:shadow-3xl transition-all duration-300">
-              <div className="bg-gradient-to-br from-[#FFB3C1] to-[#FF8FA3] p-6 md:p-8 text-white text-center">
+            <div className="bg-white rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border-2 border-[#C9184A]/40/20 hover:shadow-3xl transition-all duration-300">
+              <div className="bg-gradient-to-br from-[#C9184A] to-[#E0174A] p-6 md:p-8 text-white text-center">
                 <Sparkles className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 text-white drop-shadow-lg" />
                 <h3 className="text-2xl md:text-3xl font-bold mb-2 drop-shadow-md">ROSET SPARK</h3>
                 <p className="text-xs md:text-sm uppercase tracking-widest drop-shadow-md">Functional Sparkling Herbal Drink</p>
               </div>
 
               <div className="p-6 md:p-8 space-y-4 md:space-y-6">
-                <div className="aspect-[3/4] bg-gradient-to-br from-[#FFB3C1]/10 via-white to-[#2E7D32]/10 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                <div className="aspect-[3/4] bg-gradient-to-br from-[#FFE5EC]/30 via-white to-[#2E7D32]/10 rounded-2xl flex items-center justify-center relative overflow-hidden">
                   <div className="absolute inset-0 bg-white/50 backdrop-blur-sm"></div>
                   <div className="relative z-10 text-center p-4 md:p-6">
-                    <div className="bg-white rounded-full w-32 h-32 md:w-40 md:h-40 mx-auto mb-4 md:mb-6 flex items-center justify-center shadow-lg">
-                      <Sparkles className="w-16 h-16 md:w-24 md:h-24 text-[#C41E3A]" />
+                    <div className="bg-white rounded-full w-32 h-32 md:w-40 md:h-40 mx-auto mb-4 md:mb-6 flex items-center justify-center shadow-lg overflow-hidden">
+                      <img src="/images/logo.png" alt="ROSET SPARK Logo" className="w-full h-full object-contain p-4" />
                     </div>
                     <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 md:p-6 space-y-2 md:space-y-3">
-                      <p className="text-xl md:text-2xl font-bold text-[#C41E3A]">250ml</p>
+                      <p className="text-xl md:text-2xl font-bold text-[#C9184A]">250ml</p>
                       <p className="text-xs md:text-sm text-gray-600">Botol Premium</p>
                       <div className="flex justify-center gap-1 md:gap-2 flex-wrap">
-                        <span className="bg-[#FF8FA3] text-white px-2 md:px-3 py-1 rounded-full text-[10px] md:text-xs">Rosella</span>
+                        <span className="bg-[#C9184A] text-white px-2 md:px-3 py-1 rounded-full text-[10px] md:text-xs">Rosella</span>
                         <span className="bg-[#2E7D32] text-white px-2 md:px-3 py-1 rounded-full text-[10px] md:text-xs">Jahe</span>
                         <span className="bg-[#B8860B] text-white px-2 md:px-3 py-1 rounded-full text-[10px] md:text-xs">Kayu Manis</span>
                       </div>
@@ -229,7 +224,7 @@ export default function App() {
                 </div>
 
                 <div className="text-center">
-                  <p className="text-2xl md:text-3xl font-bold text-[#C41E3A] mb-2">Rp10.000</p>
+                  <p className="text-2xl md:text-3xl font-bold text-[#C9184A] mb-2">Rp10.000</p>
                   <p className="text-gray-600 text-xs md:text-sm">Harga terjangkau untuk mahasiswa</p>
                 </div>
               </div>
@@ -237,8 +232,8 @@ export default function App() {
 
             {/* Info & Keunggulan Brosur */}
             <div className="space-y-4 md:space-y-6">
-              <div className="bg-white rounded-2xl shadow-lg p-4 md:p-6 border-l-4 border-[#FF8FA3] hover:shadow-xl transition-all duration-300">
-                <h4 className="text-lg md:text-xl font-bold text-[#C41E3A] mb-3 md:mb-4 flex items-center gap-2">
+              <div className="bg-white rounded-2xl shadow-lg p-4 md:p-6 border-l-4 border-[#C9184A]/40 hover:shadow-xl transition-all duration-300">
+                <h4 className="text-lg md:text-xl font-bold text-[#C9184A] mb-3 md:mb-4 flex items-center gap-2">
                   <Leaf className="w-5 h-5 md:w-6 md:h-6 text-[#1B5E20]" />
                   Komposisi Alami
                 </h4>
@@ -317,14 +312,14 @@ export default function App() {
                   href="https://wa.me/6285231264685?text=Halo,%20saya%20ingin%20memesan%20ROSET%20SPARK"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 bg-[#C41E3A] text-white px-4 md:px-6 py-3 md:py-4 rounded-xl font-bold text-sm md:text-base text-center hover:bg-[#FF8FA3] transition shadow-lg flex items-center justify-center gap-2"
+                  className="flex-1 bg-[#C9184A] text-white px-4 md:px-6 py-3 md:py-4 rounded-xl font-bold text-sm md:text-base text-center hover:bg-[#C9184A] transition shadow-lg flex items-center justify-center gap-2"
                 >
                   <Phone className="w-4 h-4 md:w-5 md:h-5" />
                   Pesan Sekarang
                 </a>
                 <a
                   href="#manfaat"
-                  className="flex-1 bg-white text-[#C41E3A] px-4 md:px-6 py-3 md:py-4 rounded-xl font-bold text-sm md:text-base text-center hover:bg-gray-50 transition shadow-lg border-2 border-[#C41E3A] flex items-center justify-center gap-2"
+                  className="flex-1 bg-white text-[#C9184A] px-4 md:px-6 py-3 md:py-4 rounded-xl font-bold text-sm md:text-base text-center hover:bg-gray-50 transition shadow-lg border-2 border-[#C9184A] flex items-center justify-center gap-2"
                 >
                   <Eye className="w-4 h-4 md:w-5 md:h-5" />
                   Lihat Manfaat
@@ -339,16 +334,16 @@ export default function App() {
       <section id="tentang" className="py-12 md:py-20 px-4 md:px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#C41E3A] mb-3 md:mb-4">Tentang ROSET SPARK</h2>
-            <div className="w-20 md:w-24 h-1 bg-[#C41E3A] mx-auto mb-4 md:mb-6"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#C9184A] mb-3 md:mb-4">Tentang ROSET SPARK</h2>
+            <div className="w-20 md:w-24 h-1 bg-[#C9184A] mx-auto mb-4 md:mb-6"></div>
             <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Minuman herbal sparkling non-kafein yang menggabungkan kearifan lokal dengan inovasi modern
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <div className="space-y-4 md:space-y-6">
-              <div className="bg-white p-4 md:p-6 rounded-xl shadow-md border-l-4 border-[#FF8FA3]">
-                <h3 className="text-lg md:text-xl font-bold text-[#C41E3A] mb-2 md:mb-3">Bahan Alami Pilihan</h3>
+              <div className="bg-white p-4 md:p-6 rounded-xl shadow-md border-l-4 border-[#C9184A]/40">
+                <h3 className="text-lg md:text-xl font-bold text-[#C9184A] mb-2 md:mb-3">Bahan Alami Pilihan</h3>
                 <p className="text-sm md:text-base text-gray-700">
                   Diperkaya dengan bunga rosella kaya antioksidan, jahe hangat, kayu manis aromatik, dan pemanis alami stevia tanpa kalori berlebih.
                 </p>
@@ -366,7 +361,7 @@ export default function App() {
                 </p>
               </div>
             </div>
-            <div className="bg-gradient-to-br from-[#FFB3C1] to-[#FF8FA3] text-white p-6 md:p-10 rounded-2xl md:rounded-3xl shadow-xl">
+            <div className="bg-gradient-to-br from-[#C9184A] to-[#E0174A] text-white p-6 md:p-10 rounded-2xl md:rounded-3xl shadow-xl">
               <div className="bg-white rounded-full w-16 h-16 md:w-20 md:h-20 flex items-center justify-center mb-4 md:mb-6 shadow-lg">
                 <Leaf className="w-8 h-8 md:w-10 md:h-10 text-[#1B5E20]" />
               </div>
@@ -397,16 +392,16 @@ export default function App() {
       <section id="manfaat" className="py-12 md:py-20 px-4 md:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#C41E3A] mb-3 md:mb-4">Manfaat ROSET SPARK</h2>
-            <div className="w-20 md:w-24 h-1 bg-[#C41E3A] mx-auto mb-4 md:mb-6"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#C9184A] mb-3 md:mb-4">Manfaat ROSET SPARK</h2>
+            <div className="w-20 md:w-24 h-1 bg-[#C9184A] mx-auto mb-4 md:mb-6"></div>
             <p className="text-lg md:text-xl text-gray-600">
               Healthy Energy, Natural Focus
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <div className="bg-gradient-to-br from-[#FFB3C1] to-[#FF8FA3] text-white p-6 md:p-8 rounded-2xl shadow-lg hover:scale-105 transition">
+            <div className="bg-gradient-to-br from-[#C9184A] to-[#E0174A] text-white p-6 md:p-8 rounded-2xl shadow-lg hover:scale-105 transition">
               <div className="bg-white rounded-full w-14 h-14 md:w-16 md:h-16 flex items-center justify-center mb-3 md:mb-4">
-                <Zap className="w-7 h-7 md:w-8 md:h-8 text-[#C41E3A]" />
+                <Zap className="w-7 h-7 md:w-8 md:h-8 text-[#C9184A]" />
               </div>
               <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3 drop-shadow-md">Meningkatkan Fokus Belajar</h3>
               <p className="text-sm md:text-base text-white/95">
@@ -431,9 +426,9 @@ export default function App() {
                 Tanpa kafein berarti tanpa crash energi. Tubuh tetap segar sepanjang hari tanpa rasa lemas mendadak.
               </p>
             </div>
-            <div className="bg-white border-2 border-[#FF8FA3] p-6 md:p-8 rounded-2xl shadow-lg hover:scale-105 transition">
-              <Shield className="w-10 h-10 md:w-12 md:h-12 text-[#C41E3A] mb-3 md:mb-4" />
-              <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-[#C41E3A]">Aman untuk Lambung</h3>
+            <div className="bg-white border-2 border-[#C9184A]/40 p-6 md:p-8 rounded-2xl shadow-lg hover:scale-105 transition">
+              <Shield className="w-10 h-10 md:w-12 md:h-12 text-[#C9184A] mb-3 md:mb-4" />
+              <h3 className="text-xl md:text-2xl font-bold mb-2 md:mb-3 text-[#C9184A]">Aman untuk Lambung</h3>
               <p className="text-sm md:text-base text-gray-700">
                 Formula herbal yang lembut dan aman dikonsumsi bahkan untuk yang memiliki lambung sensitif.
               </p>
@@ -462,8 +457,8 @@ export default function App() {
       <section id="video" className="py-12 md:py-20 px-4 md:px-6 bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#C41E3A] mb-3 md:mb-4">Video Promosi</h2>
-            <div className="w-20 md:w-24 h-1 bg-[#C41E3A] mx-auto mb-4 md:mb-6"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#C9184A] mb-3 md:mb-4">Video Promosi</h2>
+            <div className="w-20 md:w-24 h-1 bg-[#C9184A] mx-auto mb-4 md:mb-6"></div>
             <p className="text-lg md:text-xl text-gray-600">
               Lihat lebih dekat proses pembuatan dan testimoni ROSET SPARK
             </p>
@@ -488,11 +483,11 @@ export default function App() {
       <section className="py-12 md:py-20 px-4 md:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#C41E3A] mb-3 md:mb-4">Galeri Produk</h2>
-            <div className="w-20 md:w-24 h-1 bg-[#C41E3A] mx-auto mb-4 md:mb-6"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#C9184A] mb-3 md:mb-4">Galeri Produk</h2>
+            <div className="w-20 md:w-24 h-1 bg-[#C9184A] mx-auto mb-4 md:mb-6"></div>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <div className="bg-gradient-to-br from-[#FFB3C1] to-[#FF8FA3] p-6 md:p-8 rounded-2xl shadow-lg">
+            <div className="bg-gradient-to-br from-[#C9184A] to-[#E0174A] p-6 md:p-8 rounded-2xl shadow-lg">
               <div className="aspect-[3/4] bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center mb-3 md:mb-4">
                 <div className="text-center text-white">
                   <Sparkles className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-3 md:mb-4 text-white drop-shadow-lg" />
@@ -527,15 +522,15 @@ export default function App() {
       </section>
 
       {/* Harga */}
-      <section id="harga" className="py-12 md:py-20 px-4 md:px-6 bg-gradient-to-br from-[#FFB3C1] to-[#FF8FA3] text-white">
+      <section id="harga" className="py-12 md:py-20 px-4 md:px-6 bg-gradient-to-br from-[#C9184A] to-[#E0174A] text-white">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-3 md:mb-4 drop-shadow-lg">Harga Spesial</h2>
           <div className="w-20 md:w-24 h-1 bg-white mx-auto mb-8 md:mb-12"></div>
           <div className="bg-white/95 backdrop-blur-md rounded-2xl md:rounded-3xl p-8 md:p-12 border-2 border-white shadow-2xl">
-            <div className="inline-block bg-[#C41E3A] text-white px-4 md:px-6 py-2 rounded-full font-bold mb-4 md:mb-6 text-sm md:text-base shadow-lg">
+            <div className="inline-block bg-[#C9184A] text-white px-4 md:px-6 py-2 rounded-full font-bold mb-4 md:mb-6 text-sm md:text-base shadow-lg">
               PROMO MAHASISWA
             </div>
-            <p className="text-4xl sm:text-5xl md:text-6xl font-bold mb-3 md:mb-4 text-[#C41E3A]">Rp10.000</p>
+            <p className="text-4xl sm:text-5xl md:text-6xl font-bold mb-3 md:mb-4 text-[#C9184A]">Rp10.000</p>
             <p className="text-xl md:text-2xl mb-6 md:mb-8 text-gray-700">per botol (250ml)</p>
             <div className="max-w-md mx-auto text-left space-y-3 md:space-y-4 mb-6 md:mb-8 text-sm md:text-base">
               <div className="flex items-start gap-3">
@@ -559,7 +554,7 @@ export default function App() {
               href="https://wa.me/6285231264685?text=Halo,%20saya%20ingin%20memesan%20ROSET%20SPARK"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#C41E3A] text-white px-8 md:px-12 py-3 md:py-4 rounded-lg font-bold text-lg md:text-xl hover:bg-[#FF8FA3] transition shadow-xl"
+              className="inline-flex items-center gap-2 bg-[#C9184A] text-white px-8 md:px-12 py-3 md:py-4 rounded-lg font-bold text-lg md:text-xl hover:bg-[#C9184A] transition shadow-xl"
             >
               <Phone className="w-5 h-5" />
               Pesan Sekarang
@@ -572,18 +567,18 @@ export default function App() {
       <section id="tim" className="py-12 md:py-20 px-4 md:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#C41E3A] mb-3 md:mb-4">Tim Kami</h2>
-            <div className="w-20 md:w-24 h-1 bg-[#C41E3A] mx-auto mb-4 md:mb-6"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#C9184A] mb-3 md:mb-4">Tim Kami</h2>
+            <div className="w-20 md:w-24 h-1 bg-[#C9184A] mx-auto mb-4 md:mb-6"></div>
             <p className="text-lg md:text-xl text-gray-600">
               Kelompok 12 - KWU129
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
             {/* Anggota 1 */}
-            <div className="bg-gradient-to-br from-[#FFB3C1] to-[#FF8FA3] text-white p-6 md:p-8 rounded-2xl shadow-xl hover:scale-105 transition">
+            <div className="bg-gradient-to-br from-[#C9184A] to-[#E0174A] text-white p-6 md:p-8 rounded-2xl shadow-xl hover:scale-105 transition">
               <div className="flex flex-col items-center text-center space-y-3 md:space-y-4">
                 <div className="w-24 h-24 md:w-32 md:h-32 bg-white rounded-full flex items-center justify-center shadow-lg">
-                  <p className="text-4xl md:text-5xl font-bold text-[#C41E3A]">IZ</p>
+                  <p className="text-4xl md:text-5xl font-bold text-[#C9184A]">IZ</p>
                 </div>
                 <div>
                   <h3 className="text-lg md:text-2xl font-bold mb-1">Izaz Tsany Rismawan</h3>
@@ -637,8 +632,8 @@ export default function App() {
       <section id="kontak" className="py-12 md:py-20 px-4 md:px-6 bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-8 md:mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#C41E3A] mb-3 md:mb-4">Hubungi Kami</h2>
-            <div className="w-20 md:w-24 h-1 bg-[#C41E3A] mx-auto mb-4 md:mb-6"></div>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#C9184A] mb-3 md:mb-4">Hubungi Kami</h2>
+            <div className="w-20 md:w-24 h-1 bg-[#C9184A] mx-auto mb-4 md:mb-6"></div>
             <p className="text-lg md:text-xl text-gray-600">
               Siap melayani pesanan Anda!
             </p>
@@ -670,9 +665,9 @@ export default function App() {
             >
               <Mail className="w-10 h-10 mx-auto mb-3" />
               <h3 className="text-xl font-bold mb-2">Email</h3>
-              <p className="text-white/90 text-sm">rosetspark@herbal.com</p>
+              <p className="text-white/90 text-sm">rosetspark@gmail.com</p>
             </a>
-            <div className="bg-gradient-to-br from-[#FFB3C1] to-[#FF8FA3] text-white p-6 rounded-2xl shadow-lg text-center">
+            <div className="bg-gradient-to-br from-[#C9184A] to-[#E0174A] text-white p-6 rounded-2xl shadow-lg text-center">
               <MapPin className="w-10 h-10 mx-auto mb-3" />
               <h3 className="text-xl font-bold mb-2">Alamat</h3>
               <p className="text-white/90 text-sm">
@@ -684,11 +679,11 @@ export default function App() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#FF8FA3] text-white py-8 md:py-10 px-6">
+      <footer className="bg-[#C9184A] text-white py-8 md:py-10 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-6">
-            <div className="flex items-center justify-center gap-2 mb-3">
-              <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-white drop-shadow-lg" />
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <img src="/images/logo.png" alt="ROSET SPARK Logo" className="w-10 h-10 object-contain bg-white rounded-full p-1 shadow-lg" />
               <p className="text-lg md:text-xl font-bold drop-shadow-md">ROSET SPARK</p>
             </div>
             <p className="text-sm md:text-base text-white/95 mb-4 italic drop-shadow-sm font-semibold">Revitalisasi Jamu Nusantara</p>
