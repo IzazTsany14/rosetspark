@@ -1,8 +1,35 @@
-import { Sparkles, Zap, Heart, Shield, Leaf, Phone, Instagram, MapPin, Mail, User, Download, Eye, Menu, X } from 'lucide-react';
+import { Sparkles, Zap, Heart, Shield, Leaf, Phone, Instagram, MapPin, Mail, User, Download, Eye, Menu, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeVideo, setActiveVideo] = useState(0);
+
+  const videos = [
+    {
+      type: 'youtube',
+      src: "https://www.youtube.com/embed/6jp8Rerl2G0?si=dHW3HGr_hgYM5xtY",
+      title: "ROSET SPARK Minuman Herbal Sparkling"
+    },
+    {
+      type: 'local',
+      src: "/video/iklan_porduct.mp4",
+      title: "Video Iklan Produk"
+    },
+    {
+      type: 'local',
+      src: "/video/iklan.mp4",
+      title: "Video Iklan"
+    }
+  ];
+
+  const nextVideo = () => {
+    setActiveVideo((prev) => (prev + 1) % videos.length);
+  };
+
+  const prevVideo = () => {
+    setActiveVideo((prev) => (prev - 1 + videos.length) % videos.length);
+  };
 
   useEffect(() => {
     // Smooth scroll behavior
@@ -463,17 +490,58 @@ export default function App() {
               Lihat lebih dekat proses pembuatan dan testimoni ROSET SPARK
             </p>
           </div>
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-            <div className="aspect-video">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/6jp8Rerl2G0?si=dHW3HGr_hgYM5xtY"
-                title="ROSET SPARK Minuman Herbal Sparkling"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              ></iframe>
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
+            <div className="aspect-video relative bg-black flex items-center justify-center">
+              {videos[activeVideo].type === 'youtube' ? (
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={videos[activeVideo].src}
+                  title={videos[activeVideo].title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                ></iframe>
+              ) : (
+                <video
+                  src={videos[activeVideo].src}
+                  title={videos[activeVideo].title}
+                  controls
+                  className="w-full h-full object-contain"
+                ></video>
+              )}
+
+              {/* Carousel Controls */}
+              <button
+                onClick={prevVideo}
+                className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#C9184A] p-2 md:p-3 rounded-full shadow-lg backdrop-blur-sm transition-all opacity-100 md:opacity-0 md:group-hover:opacity-100 z-10"
+                aria-label="Previous video"
+              >
+                <ChevronLeft className="w-6 h-6 md:w-8 md:h-8" />
+              </button>
+              <button
+                onClick={nextVideo}
+                className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-[#C9184A] p-2 md:p-3 rounded-full shadow-lg backdrop-blur-sm transition-all opacity-100 md:opacity-0 md:group-hover:opacity-100 z-10"
+                aria-label="Next video"
+              >
+                <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />
+              </button>
+            </div>
+
+            {/* Carousel Indicators */}
+            <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
+              {videos.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setActiveVideo(index)}
+                  className={`h-2.5 md:h-3 rounded-full transition-all shadow-md ${
+                    activeVideo === index 
+                      ? 'bg-[#C9184A] w-6 md:w-8' 
+                      : 'bg-white/70 hover:bg-white w-2.5 md:w-3'
+                  }`}
+                  aria-label={`Go to video ${index + 1}`}
+                />
+              ))}
             </div>
           </div>
         </div>
