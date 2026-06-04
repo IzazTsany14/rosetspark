@@ -7,6 +7,11 @@ export default function App() {
 
   const videos = [
     {
+      type: 'local',
+      src: "/video/iklan.mp4",
+      title: "Video Iklan"
+    },
+    {
       type: 'youtube',
       src: "https://www.youtube.com/embed/6jp8Rerl2G0?si=dHW3HGr_hgYM5xtY",
       title: "ROSET SPARK Minuman Herbal Sparkling"
@@ -15,11 +20,6 @@ export default function App() {
       type: 'local',
       src: "/video/iklan_porduct.mp4",
       title: "Video Iklan Produk"
-    },
-    {
-      type: 'local',
-      src: "/video/iklan.mp4",
-      title: "Video Iklan"
     }
   ];
 
@@ -222,25 +222,25 @@ export default function App() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-stretch">
             {/* Brosur Utama */}
-            <div className="bg-white rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border-2 border-[#C9184A]/40/20 hover:shadow-3xl transition-all duration-300">
+            <div className="bg-white rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden border-2 border-[#C9184A]/40/20 hover:shadow-3xl transition-all duration-300 flex flex-col h-full">
               <div className="bg-gradient-to-br from-[#C9184A] to-[#E0174A] p-6 md:p-8 text-white text-center">
                 <Sparkles className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-3 md:mb-4 text-white drop-shadow-lg" />
                 <h3 className="text-2xl md:text-3xl font-bold mb-2 drop-shadow-md">ROSET SPARK</h3>
                 <p className="text-xs md:text-sm uppercase tracking-widest drop-shadow-md">Functional Sparkling Herbal Drink</p>
               </div>
 
-              <div className="p-6 md:p-8 space-y-4 md:space-y-6">
-                <div className="aspect-[3/4] bg-gradient-to-br from-[#FFE5EC]/30 via-white to-[#2E7D32]/10 rounded-2xl flex items-center justify-center relative overflow-hidden">
+              <div className="p-6 md:p-8 flex-1 flex flex-col">
+                <div className="flex-1 bg-gradient-to-br from-[#FFE5EC]/30 via-white to-[#2E7D32]/10 rounded-2xl relative overflow-hidden flex flex-col p-4 md:p-6 mb-4">
                   <div className="absolute inset-0 bg-white/50 backdrop-blur-sm"></div>
-                  <div className="relative z-10 text-center p-4 md:p-6">
-                    <div className="bg-white rounded-full w-32 h-32 md:w-40 md:h-40 mx-auto mb-4 md:mb-6 flex items-center justify-center shadow-lg overflow-hidden">
-                      <img src="/images/logo.png" alt="ROSET SPARK Logo" className="w-full h-full object-contain p-4" />
+                  <div className="relative z-10 flex-1 flex flex-col w-full h-full">
+                    <div className="flex-1 w-full mx-auto flex items-center justify-center relative mb-4">
+                      <img src="/images/botol-nobg.png" alt="ROSET SPARK Botol" className="h-48 md:h-72 w-full object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)] hover:scale-110 md:hover:scale-[1.15] transition-transform duration-500 origin-bottom" />
                     </div>
-                    <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 md:p-6 space-y-2 md:space-y-3">
-                      <p className="text-xl md:text-2xl font-bold text-[#C9184A]">250ml</p>
-                      <p className="text-xs md:text-sm text-gray-600">Botol Premium</p>
+                    <div className="bg-white/90 backdrop-blur-sm rounded-xl p-4 md:p-6 text-center w-full max-w-xs mx-auto">
+                      <p className="text-xl md:text-2xl font-bold text-[#C9184A] mb-1">250ml</p>
+                      <p className="text-xs md:text-sm text-gray-600 mb-3">Botol Premium</p>
                       <div className="flex justify-center gap-1 md:gap-2 flex-wrap">
                         <span className="bg-[#C9184A] text-white px-2 md:px-3 py-1 rounded-full text-[10px] md:text-xs">Rosella</span>
                         <span className="bg-[#2E7D32] text-white px-2 md:px-3 py-1 rounded-full text-[10px] md:text-xs">Jahe</span>
@@ -250,7 +250,7 @@ export default function App() {
                   </div>
                 </div>
 
-                <div className="text-center">
+                <div className="text-center mt-auto">
                   <p className="text-2xl md:text-3xl font-bold text-[#C9184A] mb-2">Rp10.000</p>
                   <p className="text-gray-600 text-xs md:text-sm">Harga terjangkau untuk mahasiswa</p>
                 </div>
@@ -258,7 +258,7 @@ export default function App() {
             </div>
 
             {/* Info & Keunggulan Brosur */}
-            <div className="space-y-4 md:space-y-6">
+            <div className="space-y-4 md:space-y-6 h-full flex flex-col">
               <div className="bg-white rounded-2xl shadow-lg p-4 md:p-6 border-l-4 border-[#C9184A]/40 hover:shadow-xl transition-all duration-300">
                 <h4 className="text-lg md:text-xl font-bold text-[#C9184A] mb-3 md:mb-4 flex items-center gap-2">
                   <Leaf className="w-5 h-5 md:w-6 md:h-6 text-[#1B5E20]" />
@@ -334,7 +334,7 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 md:gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-auto">
                 <a
                   href="https://wa.me/6285231264685?text=Halo,%20saya%20ingin%20memesan%20ROSET%20SPARK"
                   target="_blank"
@@ -555,35 +555,52 @@ export default function App() {
             <div className="w-20 md:w-24 h-1 bg-[#C9184A] mx-auto mb-4 md:mb-6"></div>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <div className="bg-gradient-to-br from-[#C9184A] to-[#E0174A] p-6 md:p-8 rounded-2xl shadow-lg">
-              <div className="aspect-[3/4] bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center mb-3 md:mb-4">
-                <div className="text-center text-white">
-                  <Sparkles className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-3 md:mb-4 text-white drop-shadow-lg" />
-                  <p className="font-semibold text-sm md:text-base drop-shadow-md">Botol 250ml</p>
-                  <p className="text-xs md:text-sm text-white/90">Label Premium</p>
-                </div>
+            {/* Card 1 */}
+            <div className="group bg-gradient-to-br from-[#C9184A] to-[#E0174A] p-6 md:p-8 rounded-[2rem] shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 border border-white/10 relative overflow-hidden flex flex-col h-full">
+              <div className="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-white/10 rounded-full blur-3xl group-hover:bg-white/20 transition-colors"></div>
+              <div className="relative aspect-[4/5] bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 overflow-hidden p-6 border border-white/20 group-hover:border-white/40 transition-colors">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.2)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <img src="/images/label_botol-nobg.png" alt="Label Premium" className="w-full h-full object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.3)] group-hover:scale-110 transition-transform duration-500 relative z-10" />
               </div>
-              <p className="text-white text-center text-sm md:text-base drop-shadow-md">Kemasan botol bening dengan label ROSET SPARK</p>
+              <div className="text-center relative z-10 flex-1 flex flex-col justify-end">
+                <h3 className="text-white font-bold text-2xl drop-shadow-md mb-2">Botol 250ml</h3>
+                <div className="mb-4">
+                  <span className="inline-block bg-white/20 text-white text-xs md:text-sm font-semibold px-4 py-1.5 rounded-full backdrop-blur-sm border border-white/10">Label Premium</span>
+                </div>
+                <p className="text-white/80 text-sm md:text-base leading-relaxed">Kemasan botol bening elegan dengan desain label eksklusif ROSET SPARK.</p>
+              </div>
             </div>
-            <div className="bg-gradient-to-br from-[#1B5E20] to-[#2E7D32] p-6 md:p-8 rounded-2xl shadow-lg">
-              <div className="aspect-[3/4] bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center mb-3 md:mb-4">
-                <div className="text-center text-white">
-                  <Leaf className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-3 md:mb-4 text-white drop-shadow-lg" />
-                  <p className="font-semibold text-sm md:text-base drop-shadow-md">Bahan Alami</p>
-                  <p className="text-xs md:text-sm text-white/90">Rosella & Rempah</p>
-                </div>
+
+            {/* Card 2 */}
+            <div className="group bg-gradient-to-br from-[#1B5E20] to-[#2E7D32] p-6 md:p-8 rounded-[2rem] shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 border border-white/10 relative overflow-hidden flex flex-col h-full">
+              <div className="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-white/10 rounded-full blur-3xl group-hover:bg-white/20 transition-colors"></div>
+              <div className="relative aspect-[4/5] bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 overflow-hidden p-6 border border-white/20 group-hover:border-white/40 transition-colors">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.2)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <img src="/images/bahan_nobg.png" alt="Bahan Alami" className="w-full h-full object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.4)] group-hover:scale-110 transition-transform duration-500 relative z-10" />
               </div>
-              <p className="text-white text-center text-sm md:text-base drop-shadow-md">Bunga rosella segar dan rempah pilihan</p>
+              <div className="text-center relative z-10 flex-1 flex flex-col justify-end">
+                <h3 className="text-white font-bold text-2xl drop-shadow-md mb-2">Bahan Alami</h3>
+                <div className="mb-4">
+                  <span className="inline-block bg-white/20 text-white text-xs md:text-sm font-semibold px-4 py-1.5 rounded-full backdrop-blur-sm border border-white/10">Rosella & Rempah</span>
+                </div>
+                <p className="text-white/80 text-sm md:text-base leading-relaxed">Terbuat dari bunga rosella segar dan rempah pilihan berkualitas tinggi.</p>
+              </div>
             </div>
-            <div className="bg-gradient-to-br from-[#B8860B] to-[#DAA520] p-6 md:p-8 rounded-2xl shadow-lg sm:col-span-2 lg:col-span-1">
-              <div className="aspect-[3/4] bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center mb-3 md:mb-4">
-                <div className="text-center text-white">
-                  <Zap className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-3 md:mb-4 text-white drop-shadow-lg" />
-                  <p className="font-semibold text-sm md:text-base drop-shadow-md">Promo Spesial</p>
-                  <p className="text-xs md:text-sm text-white/90">Rp10.000</p>
-                </div>
+
+            {/* Card 3 */}
+            <div className="group bg-gradient-to-br from-[#B8860B] to-[#DAA520] p-6 md:p-8 rounded-[2rem] shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 border border-white/10 relative overflow-hidden sm:col-span-2 lg:col-span-1 flex flex-col h-full">
+              <div className="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-white/10 rounded-full blur-3xl group-hover:bg-white/20 transition-colors"></div>
+              <div className="relative aspect-[4/5] bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 overflow-hidden p-6 border border-white/20 group-hover:border-white/40 transition-colors">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.2)_0%,transparent_60%)] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <img src="/images/botol-nobg.png" alt="Promo Spesial" className="w-full h-full object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.3)] group-hover:scale-110 transition-transform duration-500 relative z-10" />
               </div>
-              <p className="text-white text-center text-sm md:text-base drop-shadow-md">Harga terjangkau untuk mahasiswa</p>
+              <div className="text-center relative z-10 flex-1 flex flex-col justify-end">
+                <h3 className="text-white font-bold text-2xl drop-shadow-md mb-2">Promo Spesial</h3>
+                <div className="mb-4">
+                  <span className="inline-block bg-[#C9184A] text-white text-xs md:text-sm font-bold px-4 py-1.5 rounded-full backdrop-blur-sm shadow-lg border border-[#C9184A]">Rp10.000 / Botol</span>
+                </div>
+                <p className="text-white/80 text-sm md:text-base leading-relaxed">Harga super terjangkau khusus untuk mahasiswa, energi maksimal!</p>
+              </div>
             </div>
           </div>
         </div>
